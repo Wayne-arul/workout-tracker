@@ -2,11 +2,13 @@ import requests
 from datetime import *
 import os
 
-APP_ID = os.environ["4bf34cc9"]
-API_KEY = os.environ["bbf0fca015afb073ab0a0ca9f6727238"]
+APP_ID = os.environ["YOUR_APP_ID"]
+API_KEY = os.environ["YOUR_API_KEY"]
 NUTRIONIX_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
-SHEET_ENDPOINT = os.environ["https://api.sheety.co/4bb3a7097948d0ad5e777b0275d0a87e/workoutTracking/workouts"]
+SHEET_ENDPOINT = os.environ["YOUR_SHEETY_API_ENDPOINT"] 
 
+# EXAMPLE ENDPOINTS:
+# https://api.sheety.co/4bb3a7097948d0ad5e777b0275476ho/workoutTracking/workouts
 # Ran 2 miles and walked 3km
 
 parameters = {
@@ -41,7 +43,7 @@ for i in range(0, len(nutrionix_response.json()['exercises'])):
     }
 
     res_header = {
-        "Authorization": f"Basic {os.environ['d2F5bmVhcnVsOlN1a3VuYWlkYXRvcmk=']}",
+        "Authorization": f"Basic {os.environ['d2F5bmVhcnVsOlN1a3VuYWlkYXRvck=']}",
         "Content-Type": "application/json"
     }
 
